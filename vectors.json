@@ -1,0 +1,74 @@
+{
+  "note": "Mycroft/tonydzi splitting vector (stripe/ai#402). expect_split = whether the RFC-correct (UTF-16) canonicaliser disagrees with code-point sort on this payload.",
+  "vectors": [
+    {
+      "name": "minimal splitting pair",
+      "intent": {
+        "�": "a",
+        "𐀀": "b"
+      },
+      "expect_split": true
+    },
+    {
+      "name": "payment-shaped (amount/currency + two user-supplied metadata keys)",
+      "intent": {
+        "amount": 1999,
+        "currency": "usd",
+        "note �": "flagged",
+        "note 💣": "card on file"
+      },
+      "expect_split": true
+    },
+    {
+      "name": "CONTROL ASCII keys only (orders must agree / prove nothing false)",
+      "intent": {
+        "amount": 1999,
+        "currency": "usd",
+        "idempotency_scope": "charge"
+      },
+      "expect_split": false
+    },
+    {
+      "name": "CONTROL non-ASCII but all-BMP (orders must agree inside the BMP)",
+      "intent": {
+        "noteé": "a",
+        "note�": "b",
+        "note中": "c"
+      },
+      "expect_split": false
+    }
+  ],
+  "local_examples_note": "The following ASCII four-tuples were generated locally, not copied from Argentum conformance vectors. Official pinned inputs are in vendor/argentum/ with provenance in SOURCES.json.",
+  "local_ascii_examples": [
+    {
+      "name": "chat.completion claim identity",
+      "intent": {
+        "agent_id": "tenant_abc123",
+        "action_type": "chat.completion",
+        "scope": "a1b2c3d4e5f6",
+        "timestamp": "2026-08-26T14:30:00.000Z"
+      },
+      "expected_sha256": "444b6a15a478b847e8f1cbd04580dcb20f245bd549de2c4359066ed3c0b28158"
+    },
+    {
+      "name": "web.fetch claim identity",
+      "intent": {
+        "agent_id": "tenant_abc123",
+        "action_type": "web.fetch",
+        "scope": "f9e8d7c6b5a4",
+        "timestamp": "2026-08-26T15:00:00.000Z"
+      },
+      "expected_sha256": "a8618823aeeeeeab871fa959a842def4d88b789ae3222419908913dffaf33166"
+    },
+    {
+      "name": "api.call (payment scope) claim identity",
+      "intent": {
+        "agent_id": "tenant_pay99",
+        "action_type": "api.call",
+        "scope": "payment_refund_001",
+        "timestamp": "2026-08-26T16:45:30.123Z"
+      },
+      "expected_sha256": "f3d7d770636de199ae1daca93da52ff8f2109a80e3c106f08e82578135884820"
+    }
+  ]
+}

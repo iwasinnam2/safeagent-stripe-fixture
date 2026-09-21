@@ -1,0 +1,25 @@
+SafeAgent x Metrecept cross-check fixture
+Copyright (c) 2026 Ohm / withOhm — MIT (see LICENSE)
+
+This repository vendors unmodified upstream files at pinned commits. They are
+not covered by the MIT license above and retain their original terms:
+
+  Files:   vendor/safeagent/**
+  Source:  https://github.com/azender1/SafeAgent
+  Commit:  3ab4a6a1cd1f2b0456e702282cd90e0cf7ce8681
+  License: Apache License 2.0 (see vendor/safeagent/LICENSE)
+  Copyright (c) azender1
+
+  Files:   vendor/argentum/**
+  Source:  https://github.com/giskard09/argentum-core
+  Commit:  baf611553715d7519b3e12fd588cfc050697b080
+  License: Apache License 2.0 (see vendor/argentum/LICENSE)
+  Copyright (c) giskard09
+
+Per-file SHA-256 hashes and canonical URLs are recorded in SOURCES.json and
+asserted by run_check.py::test_01_upstream_file_integrity.
+
+This harness is not SafeAgent, not Metrecept, not Stripe, and not the
+action_ref reference implementation. Passing tests are implementation
+evidence for one canonicalization question — not an endorsement by Stripe,
+not an authorization decision, and not proof of settlement.

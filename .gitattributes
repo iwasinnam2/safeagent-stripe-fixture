@@ -1,0 +1,5 @@
+# Byte-exact fixture: never normalize line endings or encodings.
+# SOURCES.json records SHA-256 over the original upstream bytes, and
+# run_check.py::test_01_upstream_file_integrity asserts them. Any CRLF
+# conversion on checkout would break vendored-file verification.
+* -text
