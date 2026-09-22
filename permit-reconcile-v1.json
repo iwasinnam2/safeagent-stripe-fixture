@@ -1,0 +1,24 @@
+{
+  "note": "Fixture receipt only. The signing seed is published so a stranger can verify it. It is not the production receipt key. action_ref is recomputed from preimage. A live receipt is a billed hop.",
+  "preimage": {
+    "agent_id": "giskard-self",
+    "action_type": "memory_write",
+    "scope": "mycelium:memory:session_context_v3",
+    "timestamp": "2026-05-26T20:15:00.000Z"
+  },
+  "seed_b64": "ERERERERERERERERERERERERERERERERERERERERERE=",
+  "jwk": {
+    "kty": "OKP",
+    "crv": "Ed25519",
+    "x": "0EqyMnQrtKs6E2i9RhXk5tAiSrcaAWuvhSCjMsl3hzc"
+  },
+  "jws": "eyJhbGciOiJFZERTQSIsImtpZCI6InZhSlB0ZWYtdlBuR0FJV0UxOXFsTVBEWVdHYUVSM3plZUpNXzNyMVdPN0UiLCJ0eXAiOiJvaG0tcmVjZWlwdCtqd3MifQ.eyJhY3Rpb25fcmVmIjoiMzZmZThkMDU1OWJiMjU0YzIwY2RiMGU3YTBjODNlNTNmMDQzNGZjMDc2ZTg1NmZmNzY5NDQ0ZGEyYTczYjBiNCIsImlhdCI6MTcwMDAwMDAwMCwia2luZCI6InBlcm1pdF9yZWNvbmNpbGUiLCJsZWRnZXJfZXZlbnRfaWQiOiJldi12ZWN0b3IiLCJwYXlsb2FkX3NoYTI1NiI6ImRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGQiLCJwZXJtaXRfaWQiOiJjYWZlYmFiZWNhZmViYWJlY2FmZWJhYmVjYWZlYmFiZSIsInByZWltYWdlIjp7ImFjdGlvbl90eXBlIjoibWVtb3J5X3dyaXRlIiwiYWdlbnRfaWQiOiJnaXNrYXJkLXNlbGYiLCJzY29wZSI6Im15Y2VsaXVtOm1lbW9yeTpzZXNzaW9uX2NvbnRleHRfdjMiLCJ0aW1lc3RhbXAiOiIyMDI2LTA1LTI2VDIwOjE1OjAwLjAwMFoifSwicHJvZmlsZSI6InBheW1lbnQiLCJwcm92aWRlciI6InN0cmlwZSIsInByb3ZpZGVyX29iamVjdF9pZCI6InBpX3ZlY3RvciIsInByb3ZpZGVyX3N0YXR1cyI6InN1Y2NlZWRlZCIsInJlZ2lvbiI6ImxvY2FsIiwidGVuYW50X3NoYTI1NiI6Ijk5MmExYjZmNzAwZTIzMzkiLCJ2IjoxfQ.2RK0czXhzyJqAs3nBErkq0Q0qfIgJCaTNa1RetUxIqOkqc1cdYwOxFEw1meMiMNA3SVnHZ3N972-NCAPT6M4AQ",
+  "expect": {
+    "kind": "permit_reconcile",
+    "action_ref": "36fe8d0559bb254c20cdb0e7a0c83e53f0434fc076e856ff769444da2a73b0b4",
+    "permit_id": "cafebabecafebabecafebabecafebabe",
+    "provider_object_id": "pi_vector",
+    "provider_status": "succeeded",
+    "ledger_event_id": "ev-vector"
+  }
+}
