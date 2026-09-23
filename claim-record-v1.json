@@ -1,5 +1,5 @@
 {
-  "note": "Fixture receipt only. The signing seed is published so a stranger can verify it; it is not the production receipt key. The raw sentence and raw session id are deliberately absent \u2014 hashes only. A live record is a billed hop. The pipe records the claim; it never grades it.",
+  "note": "Fixture receipt only. The signing seed is published so a stranger can verify it; it is not the production receipt key. The raw sentence and raw session id are deliberately absent \u2014 hashes only. action_ref is recomputed from the published preimage. A live record is a billed hop. The pipe records the claim; it never grades it.",
   "claim_text_sha256": "3734dd7df2c1bc4002faf695f7a32755d36b4ef2647121bfcc5c35586150886f",
   "citations": [
     {
@@ -14,14 +14,20 @@
   ],
   "profile": "customer_service",
   "session_id_sha256": "94b0eae51281bf440e2b318275aea9fc5576a7b6f348ae3b72b7194d1b88779b",
-  "action_ref": "abababababababababababababababababababababababababababababababab",
+  "action_ref": "6dd02a8b173e4513839d2ea6fc120116cb0697da45a11b672590507448b301f0",
+  "preimage": {
+    "agent_id": "giskard-self",
+    "action_type": "customer_service_claim",
+    "scope": "customer_service:claim_record:vector_v1",
+    "timestamp": "2026-09-23T10:00:00.000Z"
+  },
   "seed_b64": "EhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhI=",
   "jwk": {
     "kty": "OKP",
     "crv": "Ed25519",
     "x": "IEBA42TBDyvsnB_lAKHNTCR8idZQoB7X6CyrqGeHfCE"
   },
-  "jws": "eyJhbGciOiJFZERTQSIsImtpZCI6Ii0xN2t0VzVyY21sb2FwZXJBQkF5bnVGMjhuWTcydU5BUVRHaVp4Y2NsVkkiLCJ0eXAiOiJvaG0tcmVjZWlwdCtqd3MifQ.eyJhY3Rpb25fcmVmIjoiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYiIsImNpdGF0aW9ucyI6W3sib2JzZXJ2ZWRfYXQiOiIyMDI2LTA5LTIzVDEwOjAwOjAwWiIsInJlZiI6Im9yZGVyOjQ4MjEiLCJzb3VyY2Vfc2hhMjU2IjoiMmQ1NmFjM2Q1MmVhZGE1MzY5OWE2MzU0ZGMzYWVkMzY4ZTliZjY3NzAyZjFjMjJlMDZiMDk1ZDJmNDM4YzhiMyJ9LHsicmVmIjoicG9saWN5OnJlZnVuZHMtdjMiLCJzb3VyY2Vfc2hhMjU2IjoiYjdiYjFmZTZmYjIxZWVmZWQwY2YxMjM1OTMzMDliNzdmMzFhNmFiMDk3M2QwOWVkODE2NjViOWVmMmE2MmFmMiJ9XSwiY2xhaW1fc2hhMjU2IjoiMzczNGRkN2RmMmMxYmM0MDAyZmFmNjk1ZjdhMzI3NTVkMzZiNGVmMjY0NzEyMWJmY2M1YzM1NTg2MTUwODg2ZiIsImlhdCI6MTcwMDAwMDAwMSwia2luZCI6ImNsYWltX3JlY29yZCIsImxlZGdlcl9ldmVudF9pZCI6ImV2LWNsYWltLXZlY3RvciIsInByb2ZpbGUiOiJjdXN0b21lcl9zZXJ2aWNlIiwicmVnaW9uIjoibG9jYWwiLCJzZXNzaW9uX3NoYTI1NiI6Ijk0YjBlYWU1MTI4MWJmNDQwZTJiMzE4Mjc1YWVhOWZjNTU3NmE3YjZmMzQ4YWUzYjcyYjcxOTRkMWI4ODc3OWIiLCJ0ZW5hbnRfc2hhMjU2IjoiOTkyYTFiNmY3MDBlMjMzOSIsInYiOjF9.3ennic9lrSFhLAd4Lk8JgD5aG5D0uguhsnKYbBrdQ9sm2KrAezlHRDS3bUtrJR2QtSNG9gjKrp46e8xvCpRjDQ",
+  "jws": "eyJhbGciOiJFZERTQSIsImtpZCI6Ii0xN2t0VzVyY21sb2FwZXJBQkF5bnVGMjhuWTcydU5BUVRHaVp4Y2NsVkkiLCJ0eXAiOiJvaG0tcmVjZWlwdCtqd3MifQ.eyJhY3Rpb25fcmVmIjoiNmRkMDJhOGIxNzNlNDUxMzgzOWQyZWE2ZmMxMjAxMTZjYjA2OTdkYTQ1YTExYjY3MjU5MDUwNzQ0OGIzMDFmMCIsImNpdGF0aW9ucyI6W3sib2JzZXJ2ZWRfYXQiOiIyMDI2LTA5LTIzVDEwOjAwOjAwWiIsInJlZiI6Im9yZGVyOjQ4MjEiLCJzb3VyY2Vfc2hhMjU2IjoiMmQ1NmFjM2Q1MmVhZGE1MzY5OWE2MzU0ZGMzYWVkMzY4ZTliZjY3NzAyZjFjMjJlMDZiMDk1ZDJmNDM4YzhiMyJ9LHsicmVmIjoicG9saWN5OnJlZnVuZHMtdjMiLCJzb3VyY2Vfc2hhMjU2IjoiYjdiYjFmZTZmYjIxZWVmZWQwY2YxMjM1OTMzMDliNzdmMzFhNmFiMDk3M2QwOWVkODE2NjViOWVmMmE2MmFmMiJ9XSwiY2xhaW1fc2hhMjU2IjoiMzczNGRkN2RmMmMxYmM0MDAyZmFmNjk1ZjdhMzI3NTVkMzZiNGVmMjY0NzEyMWJmY2M1YzM1NTg2MTUwODg2ZiIsImlhdCI6MTcwMDAwMDAwMSwia2luZCI6ImNsYWltX3JlY29yZCIsImxlZGdlcl9ldmVudF9pZCI6ImV2LWNsYWltLXZlY3RvciIsInByb2ZpbGUiOiJjdXN0b21lcl9zZXJ2aWNlIiwicmVnaW9uIjoibG9jYWwiLCJzZXNzaW9uX3NoYTI1NiI6Ijk0YjBlYWU1MTI4MWJmNDQwZTJiMzE4Mjc1YWVhOWZjNTU3NmE3YjZmMzQ4YWUzYjcyYjcxOTRkMWI4ODc3OWIiLCJ0ZW5hbnRfc2hhMjU2IjoiOTkyYTFiNmY3MDBlMjMzOSIsInYiOjF9.cw9nVRQEsuxiXzFVjzhJz6LswMb4BngXlA4HYSrGrwuPGb46ZBZ4q6n5SFhedupwVYgmiskYPioqvuWtsPF4Bw",
   "expect": {
     "kind": "claim_record",
     "claim_sha256": "3734dd7df2c1bc4002faf695f7a32755d36b4ef2647121bfcc5c35586150886f",
@@ -37,6 +43,7 @@
       }
     ],
     "profile": "customer_service",
-    "ledger_event_id": "ev-claim-vector"
+    "ledger_event_id": "ev-claim-vector",
+    "action_ref": "6dd02a8b173e4513839d2ea6fc120116cb0697da45a11b672590507448b301f0"
   }
 }
